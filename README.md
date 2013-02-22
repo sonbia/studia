@@ -2,4 +2,7 @@ studia
 ======
 
 inżynieria oprogramowania 
+
+
+
 :):)
