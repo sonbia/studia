@@ -20,4 +20,3 @@ Ró¿nicza polega na tym, ¿e w systemie scentralizowanym tylko komputer centralny 
     stash - dodaj do schowka
     pull - zmany ze zdalnego repozytorium zaraz po pobraniu zostan¹ scalone z ga³êzi¹ g³ón¹ w moim lokalnym repozytorium
     push - 'wypychanie' zmian na serwer np. Ÿród³owy
-  
