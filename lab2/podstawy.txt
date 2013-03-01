@@ -1,0 +1,23 @@
+System kontroli wersji to oprogramowanie s³u¿¹ce do œledzenia zmian g³ównie w kodzie Ÿród³owym oraz pomocy w ³¹czeniu zmian dokonanych przez wiele osób w ró¿nych momentach. 
+
+Polega na tworzeniu plików i modyfikacji w katalogu roboczym. Nastêpnie plik umieszczony w przechowalni, zawieracj¹cy informacje o zmianach po ich zaakceptowaniu(zatwierdzeniu) wprowadza te zmiany i zapisuje stan projektu w repozytorium.
+
+Ró¿nicza polega na tym, ¿e w systemie scentralizowanym tylko komputer centralny posada pe³ne repozytorium natomiast w rozproszonym ka¿dy komputer ma pe³ne repozytorium. Mo¿liwa te¿ jest praca offline.
+
+    init - tworzenie repozytorium
+    clone - s³u¿y do klonowania repozytorium
+    add - dodawanie pliku do repozytorium
+    status - sprawdzanie statusu repozytorium
+    diff - pokazuje zmiany w repozytorium
+    commit - s³u¿y do zatwierdzania zmian
+    reset - wycofanie/usuwanie zmiany z przechowalni
+    rm - doda do poczekalni operacjê usuniêci pliku
+    mv - s³u¿y do zmiany nazwy pliku w repozytorium
+    branch - wyœwietla listê ga³êzi
+    checkout- wycofanie zmian z katalogu roboczego
+    merge - scalanie ga³êzi z g³ówn¹ ga³êzi¹
+    log - historia zatwierdzania
+    stash - dodaj do schowka
+    pull - zmany ze zdalnego repozytorium zaraz po pobraniu zostan¹ scalone z ga³êzi¹ g³ón¹ w moim lokalnym repozytorium
+    push - 'wypychanie' zmian na serwer np. Ÿród³owy
+  
