@@ -1,0 +1,22 @@
+a) zasady dzia³ania ga³êzi w systemie git
+
+Wed³ug konwencji, lokalny aktualny katalog roboczy w gicie jest nazywany "master". To jest po prostu nazwa ga³êzi, któr¹ git tworzy, kiedy zaczyna siê puste repozytorium. Mo¿na j¹ usun¹æ jeœli nie bêdzie odpowiadaæ jego nazwa.
+Jeœli tworzy siê swoje repozytorium przez klonowanie czyjegoœ repozytorium, zdalna ga³¹Ÿ "master" jest kopiowana na lokaln¹ ga³¹Ÿ nazwan¹ "origin". Mo¿na mieæ swoj¹ w³asn¹ ga³¹Ÿ "master", która nie jest przywi¹zana do zdalnego repozytorium.
+Istnieje zawsze aktualna g³owica, zwana HEAD. (Aktualnie jest to link symboliczny, .git/HEAD, do pliku takiego jak refs/heads/master.) Git wymaga aby to zawsze wskazywa³o do katalogu refs/heads.
+
+b) nazywa domyœlnej ga³êzi rozwoju w systemie git
+Domyœlna nazwa ga³êzi Gita to "master". Kiedy zatwierdza siê pierwsze zmiany, otrzymuje siê ga³¹Ÿ master, która wskazuje na ostatni zatwierdzony zestaw. Z ka¿dym zatwierdzeniem automatycznie przesuwa siê ona do przodu.
+
+
+c) wskaŸnika HEAD
+
+HEAD zwyk³ byæ Uniksowym symlinkiem, i nadal mo¿e byæ tak postrzegany, ale aby obs³ugiwaæ systemy firmy Microsoft, to jest teraz tym co jest nazywane "symboliczna referencja" lub symref i jest prostym plikiem zawieraj¹cym "ref: refs/heads/master". Git traktuje to tak jak symlink. Istnieje pomocnik git-update-ref, który je zapisuje.
+Podczas gdy HEAD musi wskazywaæ na refs/heads, legalnym jest wskazywanie na nieistniej¹cy plik. To w³aœnie siê dzieje przed pierwszym zatwierdzeniem w ca³kowicie nowym repozytorium.
+Kiedy wykonuje siê "git commit", nowy obiekt zatwierdzenia jest tworzony ze starym HEAD jako przodkiem, a nowe zatwierdzenie jest zapisywane do aktualnej g³owicy (wskazywanej przez HEAD).
+
+d) wypisz polecenia git zwi¹zane z ga³êziami i prac¹ na nich
+
+ $ git branch testing - tworzy nowy wskaŸnik na ten sam zestaw zmian, w którym aktualnie siê znajdujesz
+$ git checkout testing - prze³¹czaenie na ga³¹Ÿ
+$ git checkout master - prze³¹czenie z powrotem na ga³¹Ÿ master
+$ git merge hotfix - uruchomienie testu i scalenie ga³êzi z ga³êzi¹ master
